@@ -11,8 +11,8 @@
                 progresso.classList.add('fadeout')
                 load = setInterval(() => {
                     progresso.value += 1
-                    encerramento.style.marginTop = '-40%';
                     if(progresso.value === progresso.max) {
+                        encerramento.style.marginTop = '-40%';
                         progresso.classList.remove('fadeout')
                         clearInterval(load)
                         encerramento.classList.add('fadeout')
