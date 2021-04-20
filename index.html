@@ -12,19 +12,23 @@
                 load = setInterval(() => {
                     progresso.value += 1
                     if(progresso.value === progresso.max) {
-                        encerramento.style.marginTop = '-40%';
+                        finalPlay()
                         progresso.classList.remove('fadeout')
                         clearInterval(load)
-                        encerramento.classList.add('fadeout')
-                        final.play()
-                        setTimeout(() => {
-                            mensagem.classList.add('fadeout')
-                        }, 3000)
-                        setTimeout(() => {
-                            mensagem.classList.remove('fadeout')
-                        }, 6000)
                     }
                 },50)
+            }
+
+            function finalPlay() {
+                encerramento.style.marginTop = '-40%';
+                encerramento.classList.add('fadeout')
+                final.play()
+                setTimeout(() => {
+                    mensagem.classList.add('fadeout')
+                }, 3000)
+                setTimeout(() => {
+                    mensagem.classList.remove('fadeout')
+                }, 6000)
             }
 
             function reset() {
